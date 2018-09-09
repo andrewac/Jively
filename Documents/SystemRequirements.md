@@ -7,7 +7,7 @@
   - Use cloud service
   - Some database
 3. Simulate the sensor
-  - provides data in degrees C/F in a text file
+  - provides data in degrees C/F
   - remote from the webapp 
 
 ## Sprint 2:
