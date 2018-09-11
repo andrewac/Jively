@@ -7,8 +7,8 @@
   - use cloud service (cloud access)
   - database of user ID, sensor name, sensor data 
   - additional features
-   - threshhold alerts
-   - error checking
+    - threshhold alerts
+    - error checking
   - Multiple users w/ multiple sensors
 ### 3. Simulate the sensor
   - provides data in degrees C/F
