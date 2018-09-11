@@ -26,6 +26,7 @@
 ### 3. Simulate the sensor
   - provides data in degrees C/F
   - remote from the webapp 
+  - different for each user
 
 ## Sprint 2:
 ### 1. Ensuring security: 
