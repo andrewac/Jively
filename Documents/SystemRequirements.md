@@ -4,8 +4,8 @@
   - Users can only access their sensors. 
 ### 2. Building a web app
   - display a plot of sensor data over time with a 5 minute time interval
-  - Use cloud service (cloud access)
-  - Some database
+  - use cloud service (cloud access)
+  - database of user ID, sensor name, sensor data 
   - additional features
    - threshhold alerts
    - error checking
@@ -21,8 +21,8 @@
   - each user gets a unique ID; each ID is associated with that user's sensors. 
 ### 2. Building a web app
   - display a plot of sensor data over time with a 5 minute time interval
-  - Use cloud service (cloud access)
-  - Some database
+  - use cloud service (cloud access)
+  - database of user ID, sensor name, sensor data
 ### 3. Simulate the sensor
   - provides data in degrees C/F
   - remote from the webapp 
