@@ -1,10 +1,10 @@
 # System Requirements
 ## Sprint 1:
 1. Ensuring Security
-  - each user gets some ID; each ID is associated with their sensors. 
+  - each user gets a unique ID; each ID is associated with that user's sensors. 
 2. Building a web app
   - display a plot of sensor data over time with a 5 minute time interval
-  - Use cloud service
+  - Use cloud service (cloud access)
   - Some database
 3. Simulate the sensor
   - provides data in degrees C/F
