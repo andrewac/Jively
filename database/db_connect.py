@@ -1,27 +1,29 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Wed Sep 19 02:08:18 2018
-
-@author: niveditanatarajan
-"""
-
-#!/usr/bin/python3
-
 import pymysql
+def sqlconnector():
 
-# Open database connection
-db = pymysql.connect("localhost","testuser","test123","TESTDB" )
 
-# prepare a cursor object using cursor() method
-cursor = db.cursor()
+  f=open(r"data1.csv","r")
+  fstring = f.read()
 
-# execute SQL query using execute() method.
-cursor.execute("SELECT VERSION()")
+  fList=[]
+  for line in fstring.split('\n'):
+    fList.append(line.split(','))
+  print(fList)
+  #CONNECT
+  db = pymysql.connect("localhost","testuser","test123","TESTDB")
+  cursor = db.cursor()
+  # execute SQL query using execute() method.
+  cursor.execute("SELECT VERSION()")
 
-# Fetch a single row using fetchone() method.
-data = cursor.fetchone()
-print ("Database version : %s " % data)
+  # Fetch a single row using fetchone() method.
+  data = cursor.fetchone()
+  print ("Database version : %s " % data)
+  # CREATE table as per requirement
+  cursor.execute("DROP TABLE IF EXISTS JIVELY")
+  sql = """CREATE TABLE JIVELY (
+   NAME  CHAR(20) NOT NULL,
+   HUMIDITY INT,  
+   TEMPERATURE FLOAT)"""
 
-# disconnect from server
-db.close()
+  cursor.execute(sql)
+  db.close()
