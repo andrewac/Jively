@@ -7,8 +7,8 @@ from database import db_insert_into_table
 from database import db_students
 #connect to sensors
 
-#connect to database
-db_connect.sqlconnector()
+#connect to database, create table
+db_connect.sqlconnector() 
 '''
 
 sql = """INSERT INTO JIVELY
@@ -33,7 +33,7 @@ def login():
     form = LoginForm()
     if form.validate_on_submit():
         #database insert
-
+        uid=0
         flash('Login requested for user {}, remember_me={}'.format(
             form.username.data, form.remember_me.data))
         '''# Open database connection
@@ -50,7 +50,14 @@ def login():
 
         #insert into table, values
         #db_insert_into_table.sqlinsert()
+        #print("USER=",form.username.data)
+        
+        #inserting sensor data in sensor table
         db_students.sql_insert()
+        
+        #inserting username data in sensor table
+        
+        db_insert_into_table.sqlinsert(uid,form.username.data)
 
         return redirect('/index')
     return render_template('login.html', title='Sign In', form=form)

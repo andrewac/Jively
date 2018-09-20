@@ -31,7 +31,7 @@ for j in range(0,10):
 print(a_list)
 print(b_list)
 for k in range(0,10):
-    inside=[a_list[k],b_list[k]]
+    inside=[1,a_list[k],b_list[k]]
     c_list.append(inside)
 
 #final list containing pairwise data    
@@ -43,7 +43,7 @@ for k in range(0,10):
 csv_file = open(r'data1.csv', 'w')
 with csv_file:
    writer = csv.writer(csv_file)
-   writer.writerow(['Humidity','Temperature'])   
+   writer.writerow(["UID",'Humidity','Temperature'])   
    writer.writerows(c_list)
    print("Done")
 

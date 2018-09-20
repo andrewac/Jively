@@ -14,37 +14,38 @@ def sql_insert():
     fList=[]
     for line in fstring.split('\n'):
         fList.append(line.split(','))
-        print(fList)
+        #print(fList)
 
     db = pymysql.connect("localhost","testuser","test123","TESTDB")
 
-#prepare cursor
+    #prepare cursor
     cursor = db.cursor()
 
-#define drop tabel for cursor
+    #define drop tabel for cursor
     cursor.execute("DROP TABLE IF EXISTS STUDENTS")
 
-#create column names from first line
-    HUMIDITY = fList[0][0];TEMPERATURE=fList[0][1];
+    #create column names from first line
+    UID=fList[0][0];HUMIDITY = fList[0][1];TEMPERATURE=fList[0][2];
 
-#query to generate table with the above column names
+    #query to generate table with the above column names
     queryCreateStudentTable = """CREATE TABLE STUDENTS(
                             {} int,
+                            {} int,
                             {} float
-                            )""".format(HUMIDITY,TEMPERATURE)
+                            )""".format(UID,HUMIDITY,TEMPERATURE)
 
     cursor.execute(queryCreateStudentTable)
 
     del fList[0]
-#Generate multiple values from the list to be placed in a query
+    #Generate multiple values from the list to be placed in a query
     rows = ''
     for i in range(len(fList) - 1):
-        rows += "('{}','{}')".format(fList[i][0],fList[i][1])
+        rows += "('{}','{}','{}')".format(fList[i][0],fList[i][1],fList[i][2])
         if i != len(fList) - 2:
             rows += ','
         
-#print(rows)
-#print(rows) //used to make sure the last value is not a comma
+    #print(rows)
+    #print(rows) //used to make sure the last value is not a comma
     queryInsert="INSERT INTO STUDENTS VALUES"+rows
     try:
     #execute sql command

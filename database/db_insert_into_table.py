@@ -34,15 +34,31 @@ except:
 # disconnect from server
 db.close()
 '''
-def sqlinsert():
+def sqlinsert(UID,NAME):
     db=pymysql.connect("localhost","testuser","test123","TESTDB")
     cursor=db.cursor()
-    sql = """INSERT INTO JIVELY
-        (NAME,HUMIDITY,TEMPERATURE)
-        VALUES ('Niv',20,30)"""
+   
+    UID=UID+1
+    #UID = fList[0][0];NAME=fList[0][1]
+    #queryInsertStudentTable = """CREATE TABLE JIVELY (UID INT, NAME varchar(25) not null)"""
+
+    #cursor.execute(queryInsertStudentTable)
+    '''
+    sql = """CREATE TABLE JIVELY (
+                UID INT,
+                NAME varchar(25) not null)"""
+    cursor.execute(sql)
+    '''
+    queryInsert = "INSERT INTO JIVELY (UID,NAME) VALUES (%s,%s)"
+    val=(UID,NAME)
+    #Generate multiple values from the list to be placed in a query
+   
+    
     try:
-        cursor.execute(sql)
+        cursor.execute(queryInsert,val)
+        print("record inserted")
         db.commit()
     except:
         db.rollback()
+    
     db.close()

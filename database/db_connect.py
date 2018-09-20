@@ -8,7 +8,7 @@ def sqlconnector():
   fList=[]
   for line in fstring.split('\n'):
     fList.append(line.split(','))
-  print(fList)
+  #print(fList)
   #CONNECT
   db = pymysql.connect("localhost","testuser","test123","TESTDB")
   cursor = db.cursor()
@@ -19,11 +19,12 @@ def sqlconnector():
   data = cursor.fetchone()
   print ("Database version : %s " % data)
   # CREATE table as per requirement
+  
   cursor.execute("DROP TABLE IF EXISTS JIVELY")
+  
   sql = """CREATE TABLE JIVELY (
-   NAME  CHAR(20) NOT NULL,
-   HUMIDITY INT,  
-   TEMPERATURE FLOAT)"""
-
+   UID INT,
+   NAME varchar(25) not null)"""
+  
   cursor.execute(sql)
   db.close()
