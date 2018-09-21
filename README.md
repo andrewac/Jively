@@ -1,4 +1,5 @@
 ## Jively
+<img width="245" alt="screen shot 2018-09-20 at 9 21 59 pm" src="https://user-images.githubusercontent.com/18023551/45854830-1e9a5e80-bd1b-11e8-9967-cb0dd45d6612.png">
 
 This was a 10 day project to kickstart Boston University's Class of 2019 Senior Design Course. The goal was practice core skills to cooperative engineering such as agile methodology, git code management, and project management. Another goal was to familiarize ourselve with using cloud services, APIs, databases, simulation, and testing. 
 
