@@ -56,6 +56,7 @@ If a user does not enter their username or password, the appropriate error messa
 We are yet to figure out how multiple users can be added, because once a user signs in, their userid is fixed to that user, and the userid doesn't get updated on a second login attempt. 
 We were able to make the app work on a local database instance, but integrating with AWS cloud seemed a lot more problematic than we imagined. 
 Also we were able to generate python graphs for the sensor data, but displaying them required that we have the right .js files, which were hard to figure out with just a day remaining to complete.
+
 <img width="433" alt="screen shot 2018-09-20 at 9 09 12 pm" src="https://user-images.githubusercontent.com/18023551/45854730-8bf9bf80-bd1a-11e8-8322-d8fa00ba13ca.png">
 
 Overall, we were able to figure out how to design and develop a Web App from scratch with minor updates remaining. Once the updates are complete and the app is made pretty with CSS style sheets, Jively would be born!
