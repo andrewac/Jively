@@ -34,12 +34,25 @@ In order to use this app, several python modules must be installed like mysql or
 
 # What we achieved
 
-We successfully  design a login page, generated random numbers for Humidity and Temperature sensors, exported them to a csv file and read that csv file into a MySQL database. We also were able to implement a login page who's username and UserID (UID) is stored in another Table in the database. When a user logs in, the corresponding tables are updated with the sensor values and UID. The appropriate pages are also displayed for Login and Home tabs. If a user does not enter their username or password, the appropriate error message is also displayed in red.
+We successfully  design a login page, generated random numbers for Humidity and Temperature sensors, exported them to a csv file and read that csv file into a MySQL database. 
+
+We also were able to implement a login page who's username and UserID (UID) is stored in another Table in the database. 
+<img width="308" alt="screen shot 2018-09-20 at 9 17 08 pm" src="https://user-images.githubusercontent.com/18023551/45854723-8603de80-bd1a-11e8-988e-5eca489ec3d8.png">
+
+When a user logs in, the corresponding tables are updated with the sensor values and UID.
+
+<img width="341" alt="screen shot 2018-09-20 at 9 16 15 pm" src="https://user-images.githubusercontent.com/18023551/45854726-88663880-bd1a-11e8-94bf-bb56908945e9.png">
+The appropriate pages are also displayed for Login and Home tabs. 
+
+If a user does not enter their username or password, the appropriate error message is also displayed in red.
+<img width="254" alt="screen shot 2018-09-20 at 9 17 29 pm" src="https://user-images.githubusercontent.com/18023551/45854722-83a18480-bd1a-11e8-87e4-d59e4288cb17.png">
 
 # What we are yet to achieve
 
 We are yet to figure out how multiple users can be added, because once a user signs in, their userid is fixed to that user, and the userid doesn't get updated on a second login attempt. 
-We were able to make the app work on a local database instance, but integrating with AWS cloud seemed a lot more problematic than we imagined. Also we were able to generate python graphs for the sensor data, but displaying them required that we have the right .js files, which were hard to figure out with just a day remaining to complete.
+We were able to make the app work on a local database instance, but integrating with AWS cloud seemed a lot more problematic than we imagined. 
+Also we were able to generate python graphs for the sensor data, but displaying them required that we have the right .js files, which were hard to figure out with just a day remaining to complete.
+<img width="433" alt="screen shot 2018-09-20 at 9 09 12 pm" src="https://user-images.githubusercontent.com/18023551/45854730-8bf9bf80-bd1a-11e8-8322-d8fa00ba13ca.png">
 
 Overall, we were able to figure out how to design and develop a Web App from scratch with minor updates remaining. Once the updates are complete and the app is made pretty with CSS style sheets, Jively would be born!
 
