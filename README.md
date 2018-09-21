@@ -20,6 +20,7 @@ We then created a website with login interface, and a database, but had trouble 
 
 The first design was to implement an serverless AWS Web Application. According to that design AWS uses DynamoDB at the backend to serverlessly store information so we don't have to think of hosting a server ourselves. The Amazon API Gateway, AWS Lambda for backend and S3 bucket for the content were very hard to learn and integrate in just 10 days time. 
 
+
 ![awsdesign](https://user-images.githubusercontent.com/18023551/45854360-b34f8d00-bd18-11e8-823c-37e3641aeb02.png)
 
 
@@ -38,9 +39,11 @@ In order to use this app, several python modules must be installed like mysql or
 We successfully  design a login page, generated random numbers for Humidity and Temperature sensors, exported them to a csv file and read that csv file into a MySQL database. 
 
 We also were able to implement a login page who's username and UserID (UID) is stored in another Table in the database. 
+
 <img width="308" alt="screen shot 2018-09-20 at 9 17 08 pm" src="https://user-images.githubusercontent.com/18023551/45854723-8603de80-bd1a-11e8-988e-5eca489ec3d8.png">
 
 When a user logs in, the corresponding tables are updated with the sensor values and UID.
+
 
 <img width="341" alt="screen shot 2018-09-20 at 9 16 15 pm" src="https://user-images.githubusercontent.com/18023551/45854726-88663880-bd1a-11e8-94bf-bb56908945e9.png">
 The appropriate pages are also displayed for Login and Home tabs. 
