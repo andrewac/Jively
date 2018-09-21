@@ -18,7 +18,9 @@ We then created a website with login interface, and a database, but had trouble 
 ## Design
 
 The first design was to implement an serverless AWS Web Application. According to that design AWS uses DynamoDB at the backend to serverlessly store information so we don't have to think of hosting a server ourselves. The Amazon API Gateway, AWS Lambda for backend and S3 bucket for the content were very hard to learn and integrate in just 10 days time. 
-https://cdn-images-1.medium.com/max/1600/1*eIECK-X8x_9wfu9uShspHw.png
+
+![awsdesign](https://user-images.githubusercontent.com/18023551/45854360-b34f8d00-bd18-11e8-823c-37e3641aeb02.png)
+
 
 The second design is a simple Flask Framework on python, with html templates and a MySQL database for relational database. There are two tables, one is to store the username and User ID (UID) and the other table stores the sensor data linked with the UID. 
 
