@@ -22,13 +22,13 @@ def sql_insert():
     cursor = db.cursor()
 
     #define drop tabel for cursor
-    cursor.execute("DROP TABLE IF EXISTS STUDENTS")
+    cursor.execute("DROP TABLE IF EXISTS JIVELYDATA")
 
     #create column names from first line
     UID=fList[0][0];HUMIDITY = fList[0][1];TEMPERATURE=fList[0][2];
 
     #query to generate table with the above column names
-    queryCreateStudentTable = """CREATE TABLE STUDENTS(
+    queryCreateStudentTable = """CREATE TABLE JIVELYDATA(
                             {} int,
                             {} int,
                             {} float
@@ -46,7 +46,7 @@ def sql_insert():
         
     #print(rows)
     #print(rows) //used to make sure the last value is not a comma
-    queryInsert="INSERT INTO STUDENTS VALUES"+rows
+    queryInsert="INSERT INTO JIVELYDATA VALUES"+rows
     try:
     #execute sql command
         cursor.execute(queryInsert)
